@@ -1,0 +1,46 @@
+
+*** src/main.rs:141:9: replace <impl Serializer for Pencil>::serialize -> Object with Default::default()
+
+*** mutation diff:
+--- src/main.rs
++++ replace <impl Serializer for Pencil>::serialize -> Object with Default::default()
+@@ -133,24 +133,17 @@
+ {
+     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+         Display::fmt(self, f)
+     }
+ }
+ 
+ impl Serializer<Object> for Pencil {
+     fn serialize(&self) -> Object {
+-        let mut pencil = Object::new();
+-
+-        pencil.insert("start", JsonValue::Object(self.start.serialize()));
+-        pencil.insert("offsets", JsonValue::Array(
+-            self.offsets.iter().map(|offset| JsonValue::Object((*offset).serialize())).collect()
+-        ));
+-
+-        pencil
++        Default::default() /* ~ changed by cargo-mutants ~ */
+     }
+ }
+ 
+ impl Deserializer<Object> for Pencil {
+     fn deserialize(document: &Object) -> Result<Self, String> where Self: Sized {
+         let mut pencil = Pencil {
+             start: Point { x: 0.0, y: 0.0 },
+             offsets: vec![],
+
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-qHjQS3.tmp\\Cargo.toml
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-qHjQS3.tmp)
+error[E0277]: the trait bound `json::object::Object: Default` is not satisfied
+   --> src\main.rs:141:9
+    |
+141 |         Default::default() /* ~ changed by cargo-mutants ~ */
+    |         ^^^^^^^^^^^^^^^^ the trait `Default` is not implemented for `json::object::Object`
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `TSS-Proj` (bin "TSS-Proj" test) due to 1 previous error
+
+*** result: Failure(101)

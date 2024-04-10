@@ -1,0 +1,43 @@
+{
+  "outcomes": [
+    {
+      "scenario": "Baseline",
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\baseline.log",
+      "summary": "Failure",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 2.1497431,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-kOqTfP.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2093711,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-kOqTfP.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    }
+  ],
+  "total_mutants": 0,
+  "missed": 0,
+  "caught": 0,
+  "timeout": 0,
+  "unviable": 0,
+  "success": 0,
+  "failure": 0
+}

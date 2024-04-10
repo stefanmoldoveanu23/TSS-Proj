@@ -1,0 +1,57 @@
+
+*** src/main.rs:16:5: replace test with ()
+
+*** mutation diff:
+--- src/main.rs
++++ replace test with ()
+@@ -8,30 +8,17 @@
+ fn main() {
+ 
+ }
+ 
+ fn test(pencil: Pencil)
+ {
+     //fs::write("./src/functional/equivalence/test_1.json", json::stringify(JsonValue::Object(pencil.serialize()))).unwrap();
+ 
+-    let path = env::var("path").unwrap();
+-    let json = json::parse(std::str::from_utf8(fs::read(path).unwrap().as_slice()).unwrap()).unwrap();
+-
+-    let pencil_end :Result<Pencil, String>= if let JsonValue::Object(object) = json {
+-        Deserializer::deserialize(&object)
+-    } else {
+-        Err("The pencil needs to be a json object.".into())
+-    };
+-
+-    let pencil_end = pencil_end.unwrap();
+-
+-    assert_eq!(pencil, pencil_end);
+-
+-    println!("{}", pencil_end);
++    () /* ~ changed by cargo-mutants ~ */
+ }
+ 
+ trait Serializer<T> {
+     fn serialize(&self) -> T;
+ }
+ 
+ trait Deserializer<T> {
+     fn deserialize(document: &T) -> Result<Self, String> where Self:Sized;
+
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-qHjQS3.tmp\\Cargo.toml
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-qHjQS3.tmp)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.47s
+
+*** result: Success
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-qHjQS3.tmp\\Cargo.toml
+    Finished test [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src\main.rs (target\debug\deps\TSS_Proj-f24ad46a4df4cb1a.exe)
+
+running 1 test
+test functional::boundary::tests::tests::test_1 ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+*** result: Success

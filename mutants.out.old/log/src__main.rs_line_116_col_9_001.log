@@ -1,0 +1,65 @@
+
+*** src/main.rs:116:9: replace <impl PartialEq for Pencil>::eq -> bool with false
+
+*** mutation diff:
+--- src/main.rs
++++ replace <impl PartialEq for Pencil>::eq -> bool with false
+@@ -108,22 +108,17 @@
+ struct Pencil {
+     start: Point,
+     offsets: Vec<Point>,
+ }
+ 
+ impl PartialEq for Pencil
+ {
+     fn eq(&self, other: &Self) -> bool {
+-        (self.start == other.start) && (self.offsets.len() == other.offsets.len()) &&
+-            self.offsets.iter().zip(other.offsets.iter()).fold(
+-                true,
+-                |result, (point_1, point_2)|
+-                    result && (*point_1 == *point_2)
+-            )
++        false /* ~ changed by cargo-mutants ~ */
+     }
+ }
+ 
+ impl Display for Pencil
+ {
+     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+         f.write_fmt(format_args!("start: {}\noffsets: {:?}", self.start, self.offsets))
+     }
+
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-qHjQS3.tmp\\Cargo.toml
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-qHjQS3.tmp)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.51s
+
+*** result: Success
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-qHjQS3.tmp\\Cargo.toml
+    Finished test [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests src\main.rs (target\debug\deps\TSS_Proj-f24ad46a4df4cb1a.exe)
+
+running 1 test
+test functional::boundary::tests::tests::test_1 ... FAILED
+
+failures:
+
+---- functional::boundary::tests::tests::test_1 stdout ----
+thread 'functional::boundary::tests::tests::test_1' panicked at src\main.rs:27:5:
+assertion `left == right` failed
+  left: start: x: 5, y: 2
+offsets: []
+ right: start: x: 5, y: 2
+offsets: []
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    functional::boundary::tests::tests::test_1
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--bin TSS-Proj`
+
+*** result: Failure(101)
