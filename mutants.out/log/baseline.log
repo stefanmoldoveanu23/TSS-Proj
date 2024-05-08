@@ -1,38 +1,20 @@
 
 *** baseline
 
-*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-kOqTfP.tmp\\Cargo.toml
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-BfiDAU.tmp\\Cargo.toml
     Updating crates.io index
    Compiling json v0.12.4
-   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-kOqTfP.tmp)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.07s
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-BfiDAU.tmp)
+    Finished dev [unoptimized + debuginfo] target(s) in 3.27s
 
 *** result: Success
 
-*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-kOqTfP.tmp\\Cargo.toml
-    Finished test [unoptimized + debuginfo] target(s) in 0.02s
-     Running unittests src\main.rs (target\debug\deps\TSS_Proj-f24ad46a4df4cb1a.exe)
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe nextest run --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-BfiDAU.tmp\\Cargo.toml
+error: no such command: `nextest`
 
-running 1 test
-test functional::boundary::tests::tests::test_1 ... FAILED
+	Did you mean `test`?
 
-failures:
-
----- functional::boundary::tests::tests::test_1 stdout ----
-thread 'functional::boundary::tests::tests::test_1' panicked at src\main.rs:27:5:
-assertion `left == right` failed
-  left: start: x: 5, y: 2
-offsets: []
- right: start: x: 3, y: 2
-offsets: []
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-
-
-failures:
-    functional::boundary::tests::tests::test_1
-
-test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
-
-error: test failed, to rerun pass `--bin TSS-Proj`
+	View all installed commands with `cargo --list`
+	Find a package to install `nextest` with `cargo search cargo-nextest`
 
 *** result: Failure(101)

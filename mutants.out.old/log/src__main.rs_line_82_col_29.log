@@ -1,11 +1,33 @@
 
-*** baseline
+*** src/main.rs:82:29: replace && with || in <impl PartialEq for Point>::eq
+
+*** mutation diff:
+--- src/main.rs
++++ replace && with || in <impl PartialEq for Point>::eq
+@@ -74,17 +74,17 @@
+ #[derive(Default, Clone)]
+ struct Point {
+     x: f32,
+     y: f32,
+ }
+ 
+ impl PartialEq for Point {
+     fn eq(&self, other: &Self) -> bool {
+-        (self.x == other.x) && (self.y == other.y)
++        (self.x == other.x) || /* ~ changed by cargo-mutants ~ */ (self.y == other.y)
+     }
+ }
+ 
+ impl Eq for Point {}
+ 
+ impl Display for Point
+ {
+     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+
 
 *** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-vtQfAN.tmp\\Cargo.toml
-    Updating crates.io index
-   Compiling json v0.12.4
    Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-vtQfAN.tmp)
-    Finished dev [unoptimized + debuginfo] target(s) in 3.24s
+    Finished dev [unoptimized + debuginfo] target(s) in 0.66s
 
 *** result: Success
 

@@ -2,13 +2,13 @@ use std::fmt::{Debug, Display, Formatter};
 use std::{env, fs};
 use json::JsonValue;
 use json::object::Object;
-
 mod functional;
+mod mutants;
+mod structural;
 
 fn main() {
     let n :i32= env::var("n").unwrap().parse().unwrap();
     assert!(n > 0, "N needs to be greater than 0.");
-    println!("{}", n);
 
     let binding = env::var("paths").unwrap();
     let mut paths = binding.split(",");
@@ -37,7 +37,6 @@ fn test(pencil: Pencil)
 
     let n :i32= env::var("n").unwrap().parse().unwrap();
     assert!(n > 0, "N needs to be greater than 0.");
-    println!("{}", n);
 
     let binding = env::var("paths").unwrap();
     let mut paths = binding.split(",");
