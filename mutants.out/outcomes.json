@@ -3,42 +3,1464 @@
     {
       "scenario": "Baseline",
       "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\baseline.log",
-      "summary": "Failure",
+      "summary": "Success",
       "phase_results": [
         {
           "phase": "Build",
-          "duration": 3.3249495,
+          "duration": 1.9563418000000001,
           "process_status": "Success",
           "argv": [
             "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
             "build",
             "--tests",
             "--manifest-path",
-            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-BfiDAU.tmp\\Cargo.toml"
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
           ]
         },
         {
           "phase": "Test",
-          "duration": 0.1606939,
+          "duration": 0.2321017,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Point>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 79,
+                "column": 5
+              },
+              "end": {
+                "line": 81,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 80,
+              "column": 40
+            },
+            "end": {
+              "line": 80,
+              "column": 42
+            }
+          },
+          "replacement": "!=",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_80_col_40.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6205161,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2085706,
           "process_status": {
             "Failure": 101
           },
           "argv": [
             "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
-            "nextest",
-            "run",
+            "test",
             "--manifest-path",
-            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-BfiDAU.tmp\\Cargo.toml"
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Deserializer for Pencil>::deserialize",
+            "return_type": "-> Result<Self, String>",
+            "span": {
+              "start": {
+                "line": 185,
+                "column": 5
+              },
+              "end": {
+                "line": 243,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 186,
+              "column": 9
+            },
+            "end": {
+              "line": 242,
+              "column": 19
+            }
+          },
+          "replacement": "Ok(Default::default())",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_186_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6188002,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2076404,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Deserializer for Point>::deserialize",
+            "return_type": "-> Result<Self, String>",
+            "span": {
+              "start": {
+                "line": 112,
+                "column": 5
+              },
+              "end": {
+                "line": 136,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 113,
+              "column": 9
+            },
+            "end": {
+              "line": 135,
+              "column": 18
+            }
+          },
+          "replacement": "Ok(Default::default())",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_113_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6303605,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2104093,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "main",
+            "return_type": "",
+            "span": {
+              "start": {
+                "line": 9,
+                "column": 1
+              },
+              "end": {
+                "line": 32,
+                "column": 2
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 10,
+              "column": 5
+            },
+            "end": {
+              "line": 31,
+              "column": 74
+            }
+          },
+          "replacement": "()",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_10_col_5.log",
+      "summary": "MissedMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6200378,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2180251,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Debug for Point>::fmt",
+            "return_type": "-> std::fmt::Result",
+            "span": {
+              "start": {
+                "line": 95,
+                "column": 5
+              },
+              "end": {
+                "line": 97,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 96,
+              "column": 9
+            },
+            "end": {
+              "line": 96,
+              "column": 30
+            }
+          },
+          "replacement": "Ok(Default::default())",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_96_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6186915,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2173282,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Serializer for Pencil>::serialize",
+            "return_type": "-> Object",
+            "span": {
+              "start": {
+                "line": 172,
+                "column": 5
+              },
+              "end": {
+                "line": 181,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 173,
+              "column": 9
+            },
+            "end": {
+              "line": 180,
+              "column": 15
+            }
+          },
+          "replacement": "Default::default()",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_173_col_9.log",
+      "summary": "Unviable",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.2604177,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 148,
+              "column": 60
+            },
+            "end": {
+              "line": 148,
+              "column": 62
+            }
+          },
+          "replacement": "!=",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_148_col_60.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5698708,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2083725,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Point>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 79,
+                "column": 5
+              },
+              "end": {
+                "line": 81,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 80,
+              "column": 9
+            },
+            "end": {
+              "line": 80,
+              "column": 51
+            }
+          },
+          "replacement": "true",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_80_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5679249,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2231462,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Serializer for Point>::serialize",
+            "return_type": "-> Object",
+            "span": {
+              "start": {
+                "line": 101,
+                "column": 5
+              },
+              "end": {
+                "line": 108,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 102,
+              "column": 9
+            },
+            "end": {
+              "line": 107,
+              "column": 14
+            }
+          },
+          "replacement": "Default::default()",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_102_col_9.log",
+      "summary": "Unviable",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.2592295,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Point>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 79,
+                "column": 5
+              },
+              "end": {
+                "line": 81,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 80,
+              "column": 17
+            },
+            "end": {
+              "line": 80,
+              "column": 19
+            }
+          },
+          "replacement": "!=",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_80_col_17.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5267458,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.208028,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 148,
+              "column": 37
+            },
+            "end": {
+              "line": 148,
+              "column": 39
+            }
+          },
+          "replacement": "||",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_148_col_37.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6181952,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.1652085,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Display for Pencil>::fmt",
+            "return_type": "-> std::fmt::Result",
+            "span": {
+              "start": {
+                "line": 159,
+                "column": 5
+              },
+              "end": {
+                "line": 161,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 160,
+              "column": 9
+            },
+            "end": {
+              "line": 160,
+              "column": 88
+            }
+          },
+          "replacement": "Ok(Default::default())",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_160_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6244442,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2119472,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Debug for Pencil>::fmt",
+            "return_type": "-> std::fmt::Result",
+            "span": {
+              "start": {
+                "line": 166,
+                "column": 5
+              },
+              "end": {
+                "line": 168,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 167,
+              "column": 9
+            },
+            "end": {
+              "line": 167,
+              "column": 30
+            }
+          },
+          "replacement": "Ok(Default::default())",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_167_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6315421,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2090004,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 148,
+              "column": 9
+            },
+            "end": {
+              "line": 153,
+              "column": 14
+            }
+          },
+          "replacement": "true",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_148_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6271539,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2085145,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "test",
+            "return_type": "",
+            "span": {
+              "start": {
+                "line": 34,
+                "column": 1
+              },
+              "end": {
+                "line": 62,
+                "column": 2
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 38,
+              "column": 5
+            },
+            "end": {
+              "line": 61,
+              "column": 74
+            }
+          },
+          "replacement": "()",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_38_col_5.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5736714,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.1571339,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Point>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 79,
+                "column": 5
+              },
+              "end": {
+                "line": 81,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 80,
+              "column": 29
+            },
+            "end": {
+              "line": 80,
+              "column": 31
+            }
+          },
+          "replacement": "||",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_80_col_29.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.9404927,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2070702,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 152,
+              "column": 28
+            },
+            "end": {
+              "line": 152,
+              "column": 30
+            }
+          },
+          "replacement": "||",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_152_col_28.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5719941,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2086871,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl Display for Point>::fmt",
+            "return_type": "-> std::fmt::Result",
+            "span": {
+              "start": {
+                "line": 88,
+                "column": 5
+              },
+              "end": {
+                "line": 90,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 89,
+              "column": 9
+            },
+            "end": {
+              "line": 89,
+              "column": 66
+            }
+          },
+          "replacement": "Ok(Default::default())",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_89_col_9.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.569068,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2123975,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Point>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 79,
+                "column": 5
+              },
+              "end": {
+                "line": 81,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 80,
+              "column": 9
+            },
+            "end": {
+              "line": 80,
+              "column": 51
+            }
+          },
+          "replacement": "false",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_80_col_9_001.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5678102,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2095032,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 148,
+              "column": 21
+            },
+            "end": {
+              "line": 148,
+              "column": 23
+            }
+          },
+          "replacement": "!=",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_148_col_21.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.62229,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.209144,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 148,
+              "column": 84
+            },
+            "end": {
+              "line": 148,
+              "column": 86
+            }
+          },
+          "replacement": "||",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_148_col_84.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.5673005,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.2079837,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 152,
+              "column": 41
+            },
+            "end": {
+              "line": 152,
+              "column": 43
+            }
+          },
+          "replacement": "!=",
+          "genre": "BinaryOperator"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_152_col_41.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.617357,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.3108502,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "Mutant": {
+          "package": "TSS-Proj",
+          "file": "src/main.rs",
+          "function": {
+            "function_name": "<impl PartialEq for Pencil>::eq",
+            "return_type": "-> bool",
+            "span": {
+              "start": {
+                "line": 147,
+                "column": 5
+              },
+              "end": {
+                "line": 154,
+                "column": 6
+              }
+            }
+          },
+          "span": {
+            "start": {
+              "line": 148,
+              "column": 9
+            },
+            "end": {
+              "line": 153,
+              "column": 14
+            }
+          },
+          "replacement": "false",
+          "genre": "FnValue"
+        }
+      },
+      "log_path": "D:\\Projects\\TSS-Proj\\mutants.out\\log\\src__main.rs_line_148_col_9_001.log",
+      "summary": "CaughtMutant",
+      "phase_results": [
+        {
+          "phase": "Build",
+          "duration": 0.6294574,
+          "process_status": "Success",
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "build",
+            "--tests",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
+          ]
+        },
+        {
+          "phase": "Test",
+          "duration": 0.1641972,
+          "process_status": {
+            "Failure": 101
+          },
+          "argv": [
+            "\\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe",
+            "test",
+            "--manifest-path",
+            "C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml"
           ]
         }
       ]
     }
   ],
-  "total_mutants": 0,
-  "missed": 0,
-  "caught": 0,
+  "total_mutants": 23,
+  "missed": 1,
+  "caught": 20,
   "timeout": 0,
-  "unviable": 0,
+  "unviable": 2,
   "success": 0,
   "failure": 0
 }

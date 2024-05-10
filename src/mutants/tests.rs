@@ -28,4 +28,20 @@ mod tests {
         env::set_var("paths", "./src/mutants/test_1.json");
         test(get_pencil());
     }
+    
+    #[test]
+    #[should_panic(expected = "assertion `left == right` failed")]
+    fn test_2() {
+        env::set_var("n", "1");
+        env::set_var("paths", "./src/mutants/test_2.json");
+        test(get_pencil());
+    }
+
+    #[test]
+    #[should_panic(expected = "assertion `left == right` failed")]
+    fn test_3() {
+        env::set_var("n", "1");
+        env::set_var("paths", "./src/mutants/test_3.json");
+        test(get_pencil());
+    }
 }

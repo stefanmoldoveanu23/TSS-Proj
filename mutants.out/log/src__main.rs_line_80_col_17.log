@@ -1,0 +1,62 @@
+
+*** src/main.rs:80:17: replace == with != in <impl PartialEq for Point>::eq
+
+*** mutation diff:
+--- src/main.rs
++++ replace == with != in <impl PartialEq for Point>::eq
+@@ -72,17 +72,17 @@
+ #[derive(Default, Clone)]
+ struct Point {
+     x: f32,
+     y: f32,
+ }
+ 
+ impl PartialEq for Point {
+     fn eq(&self, other: &Self) -> bool {
+-        (self.x == other.x) && (self.y == other.y)
++        (self.x != /* ~ changed by cargo-mutants ~ */ other.x) && (self.y == other.y)
+     }
+ }
+ 
+ impl Eq for Point {}
+ 
+ impl Display for Point
+ {
+     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-Jj7jFB.tmp)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.49s
+
+*** result: Success
+
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml
+    Finished test [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src\main.rs (target\debug\deps\TSS_Proj-f24ad46a4df4cb1a.exe)
+
+running 3 tests
+test mutants::tests::tests::test_1 ... FAILED
+test mutants::tests::tests::test_3 - should panic ... ok
+test mutants::tests::tests::test_2 - should panic ... ok
+
+failures:
+
+---- mutants::tests::tests::test_1 stdout ----
+thread 'mutants::tests::tests::test_1' panicked at src\main.rs:56:9:
+assertion `left == right` failed
+  left: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.4]
+ right: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.5]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    mutants::tests::tests::test_1
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--bin TSS-Proj`
+
+*** result: Failure(101)

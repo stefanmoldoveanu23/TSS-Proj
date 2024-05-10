@@ -1,20 +1,24 @@
 
 *** baseline
 
-*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-BfiDAU.tmp\\Cargo.toml
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml
     Updating crates.io index
    Compiling json v0.12.4
-   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-BfiDAU.tmp)
-    Finished dev [unoptimized + debuginfo] target(s) in 3.27s
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-Jj7jFB.tmp)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.89s
 
 *** result: Success
 
-*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe nextest run --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-BfiDAU.tmp\\Cargo.toml
-error: no such command: `nextest`
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-Jj7jFB.tmp\\Cargo.toml
+    Finished test [unoptimized + debuginfo] target(s) in 0.02s
+     Running unittests src\main.rs (target\debug\deps\TSS_Proj-f24ad46a4df4cb1a.exe)
 
-	Did you mean `test`?
+running 3 tests
+test mutants::tests::tests::test_3 - should panic ... ok
+test mutants::tests::tests::test_1 ... ok
+test mutants::tests::tests::test_2 - should panic ... ok
 
-	View all installed commands with `cargo --list`
-	Find a package to install `nextest` with `cargo search cargo-nextest`
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
 
-*** result: Failure(101)
+
+*** result: Success

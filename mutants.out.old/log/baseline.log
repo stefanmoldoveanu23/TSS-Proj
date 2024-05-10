@@ -1,22 +1,58 @@
 
 *** baseline
 
-*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-vtQfAN.tmp\\Cargo.toml
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe build --tests --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-hv0aNt.tmp\\Cargo.toml
     Updating crates.io index
    Compiling json v0.12.4
-   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-vtQfAN.tmp)
-    Finished dev [unoptimized + debuginfo] target(s) in 3.24s
+   Compiling TSS-Proj v0.1.0 (C:\Users\stefa\AppData\Local\Temp\cargo-mutants-TSS-Proj-hv0aNt.tmp)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.89s
 
 *** result: Success
 
-*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-vtQfAN.tmp\\Cargo.toml
-    Finished test [unoptimized + debuginfo] target(s) in 0.01s
+*** \\\\?\\C:\\Users\\stefa\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe test --manifest-path C:\\Users\\stefa\\AppData\\Local\\Temp\\cargo-mutants-TSS-Proj-hv0aNt.tmp\\Cargo.toml
+    Finished test [unoptimized + debuginfo] target(s) in 0.02s
      Running unittests src\main.rs (target\debug\deps\TSS_Proj-f24ad46a4df4cb1a.exe)
 
-running 1 test
-test mutants::tests::tests::test_1 ... ok
+running 3 tests
+test mutants::tests::tests::test_2 ... FAILED
+test mutants::tests::tests::test_1 ... FAILED
+test mutants::tests::tests::test_3 ... FAILED
 
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+failures:
+
+---- mutants::tests::tests::test_2 stdout ----
+thread 'mutants::tests::tests::test_2' panicked at src\main.rs:56:9:
+assertion `left == right` failed
+  left: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.4]
+ right: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.5]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- mutants::tests::tests::test_1 stdout ----
+thread 'mutants::tests::tests::test_1' panicked at src\main.rs:56:9:
+assertion `left == right` failed
+  left: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.4]
+ right: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.5]
+
+---- mutants::tests::tests::test_3 stdout ----
+thread 'mutants::tests::tests::test_3' panicked at src\main.rs:56:9:
+assertion `left == right` failed
+  left: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.4]
+ right: start: x: 10, y: 4.6
+offsets: [x: 2.4, y: 3, x: 3.6, y: 1.5]
 
 
-*** result: Success
+failures:
+    mutants::tests::tests::test_1
+    mutants::tests::tests::test_2
+    mutants::tests::tests::test_3
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--bin TSS-Proj`
+
+*** result: Failure(101)

@@ -1,10 +1,10 @@
 use std::fmt::{Debug, Display, Formatter};
 use std::{env, fs};
-use json::JsonValue;
-use json::object::Object;
+use json::{JsonValue,object::Object};
 mod functional;
 mod mutants;
 mod structural;
+mod chatgpt_tests;
 
 fn main() {
     let n :i32= env::var("n").unwrap().parse().unwrap();
@@ -116,7 +116,7 @@ impl Deserializer<Object> for Point {
             if let JsonValue::Number(x) = x {
                 point.x = From::from(*x);
             } else {
-                return Err("Field x needs to be a number in point object".into());
+                return Err("Field x needs to be a number in point object.".into());
             }
         } else {
             return Err("Field x needs to be in point object.".into());
@@ -126,7 +126,7 @@ impl Deserializer<Object> for Point {
             if let JsonValue::Number(y) = y {
                 point.y = From::from(*y);
             } else {
-                return Err("Field y needs to be a number in point object".into());
+                return Err("Field y needs to be a number in point object.".into());
             }
         } else {
             return Err("Field y needs to be in point object.".into());

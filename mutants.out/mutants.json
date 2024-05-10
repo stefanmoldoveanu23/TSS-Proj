@@ -3,86 +3,26 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl PartialEq for Pencil>::eq",
-      "return_type": "-> bool",
-      "span": {
-        "start": {
-          "line": 148,
-          "column": 5
-        },
-        "end": {
-          "line": 155,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 153,
-        "column": 41
-      },
-      "end": {
-        "line": 153,
-        "column": 43
-      }
-    },
-    "replacement": "!=",
-    "genre": "BinaryOperator"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl PartialEq for Pencil>::eq",
-      "return_type": "-> bool",
-      "span": {
-        "start": {
-          "line": 148,
-          "column": 5
-        },
-        "end": {
-          "line": 155,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 149,
-        "column": 21
-      },
-      "end": {
-        "line": 149,
-        "column": 23
-      }
-    },
-    "replacement": "!=",
-    "genre": "BinaryOperator"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
       "function_name": "<impl PartialEq for Point>::eq",
       "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 80,
+          "line": 79,
           "column": 5
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 81,
+        "line": 80,
         "column": 40
       },
       "end": {
-        "line": 81,
+        "line": 80,
         "column": 42
       }
     },
@@ -93,30 +33,60 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "test",
-      "return_type": "",
+      "function_name": "<impl Deserializer for Pencil>::deserialize",
+      "return_type": "-> Result<Self, String>",
       "span": {
         "start": {
-          "line": 34,
-          "column": 1
+          "line": 185,
+          "column": 5
         },
         "end": {
-          "line": 63,
-          "column": 2
+          "line": 243,
+          "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 38,
-        "column": 5
+        "line": 186,
+        "column": 9
       },
       "end": {
-        "line": 62,
-        "column": 74
+        "line": 242,
+        "column": 19
       }
     },
-    "replacement": "()",
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl Deserializer for Point>::deserialize",
+      "return_type": "-> Result<Self, String>",
+      "span": {
+        "start": {
+          "line": 112,
+          "column": 5
+        },
+        "end": {
+          "line": 136,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 113,
+        "column": 9
+      },
+      "end": {
+        "line": 135,
+        "column": 18
+      }
+    },
+    "replacement": "Ok(Default::default())",
     "genre": "FnValue"
   },
   {
@@ -153,176 +123,26 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl Display for Point>::fmt",
-      "return_type": "-> std::fmt::Result",
-      "span": {
-        "start": {
-          "line": 89,
-          "column": 5
-        },
-        "end": {
-          "line": 91,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 90,
-        "column": 9
-      },
-      "end": {
-        "line": 90,
-        "column": 66
-      }
-    },
-    "replacement": "Ok(Default::default())",
-    "genre": "FnValue"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl PartialEq for Pencil>::eq",
-      "return_type": "-> bool",
-      "span": {
-        "start": {
-          "line": 148,
-          "column": 5
-        },
-        "end": {
-          "line": 155,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 149,
-        "column": 9
-      },
-      "end": {
-        "line": 154,
-        "column": 14
-      }
-    },
-    "replacement": "false",
-    "genre": "FnValue"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl PartialEq for Pencil>::eq",
-      "return_type": "-> bool",
-      "span": {
-        "start": {
-          "line": 148,
-          "column": 5
-        },
-        "end": {
-          "line": 155,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 149,
-        "column": 84
-      },
-      "end": {
-        "line": 149,
-        "column": 86
-      }
-    },
-    "replacement": "||",
-    "genre": "BinaryOperator"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl Deserializer for Pencil>::deserialize",
-      "return_type": "-> Result<Self, String>",
-      "span": {
-        "start": {
-          "line": 186,
-          "column": 5
-        },
-        "end": {
-          "line": 244,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 187,
-        "column": 9
-      },
-      "end": {
-        "line": 243,
-        "column": 19
-      }
-    },
-    "replacement": "Ok(Default::default())",
-    "genre": "FnValue"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl Serializer for Point>::serialize",
-      "return_type": "-> Object",
-      "span": {
-        "start": {
-          "line": 102,
-          "column": 5
-        },
-        "end": {
-          "line": 109,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 103,
-        "column": 9
-      },
-      "end": {
-        "line": 108,
-        "column": 14
-      }
-    },
-    "replacement": "Default::default()",
-    "genre": "FnValue"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
       "function_name": "<impl Debug for Point>::fmt",
       "return_type": "-> std::fmt::Result",
       "span": {
         "start": {
-          "line": 96,
+          "line": 95,
           "column": 5
         },
         "end": {
-          "line": 98,
+          "line": 97,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 97,
+        "line": 96,
         "column": 9
       },
       "end": {
-        "line": 97,
+        "line": 96,
         "column": 30
       }
     },
@@ -337,22 +157,22 @@
       "return_type": "-> Object",
       "span": {
         "start": {
-          "line": 173,
+          "line": 172,
           "column": 5
         },
         "end": {
-          "line": 182,
+          "line": 181,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 174,
+        "line": 173,
         "column": 9
       },
       "end": {
-        "line": 181,
+        "line": 180,
         "column": 15
       }
     },
@@ -363,31 +183,31 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl Display for Pencil>::fmt",
-      "return_type": "-> std::fmt::Result",
+      "function_name": "<impl PartialEq for Pencil>::eq",
+      "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 160,
+          "line": 147,
           "column": 5
         },
         "end": {
-          "line": 162,
+          "line": 154,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 161,
-        "column": 9
+        "line": 148,
+        "column": 60
       },
       "end": {
-        "line": 161,
-        "column": 88
+        "line": 148,
+        "column": 62
       }
     },
-    "replacement": "Ok(Default::default())",
-    "genre": "FnValue"
+    "replacement": "!=",
+    "genre": "BinaryOperator"
   },
   {
     "package": "TSS-Proj",
@@ -397,22 +217,22 @@
       "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 80,
+          "line": 79,
           "column": 5
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 81,
+        "line": 80,
         "column": 9
       },
       "end": {
-        "line": 81,
+        "line": 80,
         "column": 51
       }
     },
@@ -423,30 +243,30 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl Deserializer for Point>::deserialize",
-      "return_type": "-> Result<Self, String>",
+      "function_name": "<impl Serializer for Point>::serialize",
+      "return_type": "-> Object",
       "span": {
         "start": {
-          "line": 113,
+          "line": 101,
           "column": 5
         },
         "end": {
-          "line": 137,
+          "line": 108,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 114,
+        "line": 102,
         "column": 9
       },
       "end": {
-        "line": 136,
-        "column": 18
+        "line": 107,
+        "column": 14
       }
     },
-    "replacement": "Ok(Default::default())",
+    "replacement": "Default::default()",
     "genre": "FnValue"
   },
   {
@@ -457,22 +277,202 @@
       "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 80,
+          "line": 79,
           "column": 5
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 81,
+        "line": 80,
+        "column": 17
+      },
+      "end": {
+        "line": 80,
+        "column": 19
+      }
+    },
+    "replacement": "!=",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl PartialEq for Pencil>::eq",
+      "return_type": "-> bool",
+      "span": {
+        "start": {
+          "line": 147,
+          "column": 5
+        },
+        "end": {
+          "line": 154,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 148,
+        "column": 37
+      },
+      "end": {
+        "line": 148,
+        "column": 39
+      }
+    },
+    "replacement": "||",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl Display for Pencil>::fmt",
+      "return_type": "-> std::fmt::Result",
+      "span": {
+        "start": {
+          "line": 159,
+          "column": 5
+        },
+        "end": {
+          "line": 161,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 160,
+        "column": 9
+      },
+      "end": {
+        "line": 160,
+        "column": 88
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl Debug for Pencil>::fmt",
+      "return_type": "-> std::fmt::Result",
+      "span": {
+        "start": {
+          "line": 166,
+          "column": 5
+        },
+        "end": {
+          "line": 168,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 167,
+        "column": 9
+      },
+      "end": {
+        "line": 167,
+        "column": 30
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl PartialEq for Pencil>::eq",
+      "return_type": "-> bool",
+      "span": {
+        "start": {
+          "line": 147,
+          "column": 5
+        },
+        "end": {
+          "line": 154,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 148,
+        "column": 9
+      },
+      "end": {
+        "line": 153,
+        "column": 14
+      }
+    },
+    "replacement": "true",
+    "genre": "FnValue"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "test",
+      "return_type": "",
+      "span": {
+        "start": {
+          "line": 34,
+          "column": 1
+        },
+        "end": {
+          "line": 62,
+          "column": 2
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 38,
+        "column": 5
+      },
+      "end": {
+        "line": 61,
+        "column": 74
+      }
+    },
+    "replacement": "()",
+    "genre": "FnValue"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl PartialEq for Point>::eq",
+      "return_type": "-> bool",
+      "span": {
+        "start": {
+          "line": 79,
+          "column": 5
+        },
+        "end": {
+          "line": 81,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 80,
         "column": 29
       },
       "end": {
-        "line": 81,
+        "line": 80,
         "column": 31
       }
     },
@@ -487,83 +487,23 @@
       "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 148,
+          "line": 147,
           "column": 5
         },
         "end": {
-          "line": 155,
+          "line": 154,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 149,
-        "column": 9
+        "line": 152,
+        "column": 28
       },
       "end": {
-        "line": 154,
-        "column": 14
-      }
-    },
-    "replacement": "true",
-    "genre": "FnValue"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl PartialEq for Pencil>::eq",
-      "return_type": "-> bool",
-      "span": {
-        "start": {
-          "line": 148,
-          "column": 5
-        },
-        "end": {
-          "line": 155,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 149,
-        "column": 60
-      },
-      "end": {
-        "line": 149,
-        "column": 62
-      }
-    },
-    "replacement": "!=",
-    "genre": "BinaryOperator"
-  },
-  {
-    "package": "TSS-Proj",
-    "file": "src/main.rs",
-    "function": {
-      "function_name": "<impl PartialEq for Pencil>::eq",
-      "return_type": "-> bool",
-      "span": {
-        "start": {
-          "line": 148,
-          "column": 5
-        },
-        "end": {
-          "line": 155,
-          "column": 6
-        }
-      }
-    },
-    "span": {
-      "start": {
-        "line": 149,
-        "column": 37
-      },
-      "end": {
-        "line": 149,
-        "column": 39
+        "line": 152,
+        "column": 30
       }
     },
     "replacement": "||",
@@ -573,26 +513,56 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl PartialEq for Point>::eq",
-      "return_type": "-> bool",
+      "function_name": "<impl Display for Point>::fmt",
+      "return_type": "-> std::fmt::Result",
       "span": {
         "start": {
-          "line": 80,
+          "line": 88,
           "column": 5
         },
         "end": {
-          "line": 82,
+          "line": 90,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 81,
+        "line": 89,
         "column": 9
       },
       "end": {
-        "line": 81,
+        "line": 89,
+        "column": 66
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl PartialEq for Point>::eq",
+      "return_type": "-> bool",
+      "span": {
+        "start": {
+          "line": 79,
+          "column": 5
+        },
+        "end": {
+          "line": 81,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 80,
+        "column": 9
+      },
+      "end": {
+        "line": 80,
         "column": 51
       }
     },
@@ -603,27 +573,27 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl PartialEq for Point>::eq",
+      "function_name": "<impl PartialEq for Pencil>::eq",
       "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 80,
+          "line": 147,
           "column": 5
         },
         "end": {
-          "line": 82,
+          "line": 154,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 81,
-        "column": 17
+        "line": 148,
+        "column": 21
       },
       "end": {
-        "line": 81,
-        "column": 19
+        "line": 148,
+        "column": 23
       }
     },
     "replacement": "!=",
@@ -633,31 +603,31 @@
     "package": "TSS-Proj",
     "file": "src/main.rs",
     "function": {
-      "function_name": "<impl Debug for Pencil>::fmt",
-      "return_type": "-> std::fmt::Result",
+      "function_name": "<impl PartialEq for Pencil>::eq",
+      "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 167,
+          "line": 147,
           "column": 5
         },
         "end": {
-          "line": 169,
+          "line": 154,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 168,
-        "column": 9
+        "line": 148,
+        "column": 84
       },
       "end": {
-        "line": 168,
-        "column": 30
+        "line": 148,
+        "column": 86
       }
     },
-    "replacement": "Ok(Default::default())",
-    "genre": "FnValue"
+    "replacement": "||",
+    "genre": "BinaryOperator"
   },
   {
     "package": "TSS-Proj",
@@ -667,26 +637,56 @@
       "return_type": "-> bool",
       "span": {
         "start": {
-          "line": 148,
+          "line": 147,
           "column": 5
         },
         "end": {
-          "line": 155,
+          "line": 154,
           "column": 6
         }
       }
     },
     "span": {
       "start": {
-        "line": 153,
-        "column": 28
+        "line": 152,
+        "column": 41
+      },
+      "end": {
+        "line": 152,
+        "column": 43
+      }
+    },
+    "replacement": "!=",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "TSS-Proj",
+    "file": "src/main.rs",
+    "function": {
+      "function_name": "<impl PartialEq for Pencil>::eq",
+      "return_type": "-> bool",
+      "span": {
+        "start": {
+          "line": 147,
+          "column": 5
+        },
+        "end": {
+          "line": 154,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 148,
+        "column": 9
       },
       "end": {
         "line": 153,
-        "column": 30
+        "column": 14
       }
     },
-    "replacement": "||",
-    "genre": "BinaryOperator"
+    "replacement": "false",
+    "genre": "FnValue"
   }
 ]

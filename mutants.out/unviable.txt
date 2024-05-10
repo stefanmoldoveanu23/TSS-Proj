@@ -1,0 +1,2 @@
+src/main.rs:173:9: replace <impl Serializer for Pencil>::serialize -> Object with Default::default()
+src/main.rs:102:9: replace <impl Serializer for Point>::serialize -> Object with Default::default()

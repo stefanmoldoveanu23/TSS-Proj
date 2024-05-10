@@ -18,6 +18,7 @@ mod tests {
     }
 
     #[test]
+    #[should_panic(expected = "N needs to be greater than 0.")]
     fn test_2() {
         env::set_var("n", "0");
         env::set_var("paths", "./src/functional/boundary/test_1.json,./src/functional/boundary/test_2.json,./src/functional/boundary/test_3.json");
